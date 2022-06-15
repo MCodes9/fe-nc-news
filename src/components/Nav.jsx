@@ -12,23 +12,23 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="nav-link">
-      <Link to="/">
-        <p>{"{home: all articles}"} </p>
-      </Link>
-      {topics.map((topic) => {
-        return (
-          <Link
-            to={`/topics/${topic.slug}`}
-            id={`${topic.slug}`}
-            key={topic.slug}
-          >
-            {topic.slug}
-            {"    "}
-          </Link>
-        );
-      })}
-    </nav>
+    <>
+      <nav className="nav-link">
+        <Link to="/">home </Link>
+        {topics.map((topic) => {
+          return (
+            <Link
+              to={`/topics/${topic.slug}`}
+              id={`${topic.slug}`}
+              key={topic.slug}
+            >
+              {topic.slug}
+              {"    "}
+            </Link>
+          );
+        })}
+      </nav>
+    </>
   );
 };
 

@@ -25,7 +25,7 @@ const SingleArticle = () => {
       <h3>{article.title}</h3>
       <p>Author: {article.author}</p>
       <p>Date: {formatDate(article.created_at)}</p>
-      <p>Topic: {article.topic}</p>
+      <p>Body: {article.body}</p>
       <p>Votes: {article.votes}</p>
       <p>Comments: {article.comment_count}</p>
     </div>
