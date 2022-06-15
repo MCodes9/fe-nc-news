@@ -6,7 +6,7 @@ const ErrorPage = ({ status, msg }) => {
       {msg ? (
         <h2>{`${status}: ${msg} `}</h2>
       ) : (
-        <h2>Error: Sorryt his link is no longer active!</h2>
+        <h2>Error: Sorry this link is no longer active!</h2>
       )}
     </main>
   );

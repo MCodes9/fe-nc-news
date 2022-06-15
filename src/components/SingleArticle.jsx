@@ -14,7 +14,6 @@ const SingleArticle = () => {
     articleById(article_id)
       .then((singleArticleFromApi) => {
         setArticle(singleArticleFromApi);
-        console.log("article", article);
         setIsLoading(false);
         setError(null);
       })
@@ -25,7 +24,6 @@ const SingleArticle = () => {
             status,
           },
         }) => {
-          console.log(msg, status, "ERROR");
           setError({ msg, status });
           setIsLoading(false);
         }
