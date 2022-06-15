@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { articleById } from "../utils/api";
 import formatDate from "../utils/formatDate";
+import "./SingleArticle.css";
 
 const SingleArticle = () => {
   const [article, setArticle] = useState({});
