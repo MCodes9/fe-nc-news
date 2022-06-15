@@ -13,15 +13,13 @@ const ArticleList = (topic_slug) => {
     });
   }, [topic_slug]);
 
-  if (isLoading) return <p>...Loading</p>;
+  if (isLoading) return <p>... Loading</p>;
 
   return (
     <section>
-      <ul>
-        {articles.map((article) => {
-          return <ArticleCard key={article.article_id} {...article} />;
-        })}
-      </ul>
+      {articles.map((article) => {
+        return <ArticleCard key={article.article_id} article={article} />;
+      })}
     </section>
   );
 };

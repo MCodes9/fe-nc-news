@@ -2,7 +2,7 @@ import ArticleList from "./ArticleList";
 
 const Home = () => {
   return (
-    <main className="Home">
+    <main className="home">
       <ArticleList />
     </main>
   );

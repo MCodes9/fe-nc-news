@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import formatDate from "../utils/formatDate";
 
-const ArticleCard = (article) => {
+const ArticleCard = ({ article }) => {
   return (
-    <article className="ArticleCard__article">
+    <article className="ArticleCard">
       <Link to={`/articles/${article.article_id}`}>
         <h3>{article.title}</h3>
       </Link>

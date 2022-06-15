@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Topic from "./components/Topic";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SingleArticle from "./components/SingleArticle";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/topics/:topic_slug" element={<Topic />} />
+          <Route path="/articles/:article_id" element={<SingleArticle />} />
         </Routes>
       </div>
     </BrowserRouter>
