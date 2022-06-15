@@ -1,35 +1,28 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../utils/api";
+import ArticleCard from "./ArticleCard";
 
-const ArticleList = () => {
+const ArticleList = (topic_slug) => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getArticles().then((articlesFromApi) => {
+    getArticles(topic_slug.topic_slug).then((articlesFromApi) => {
       setArticles(articlesFromApi);
       setIsLoading(false);
     });
-  }, []);
-  console.log("rendering");
+  }, [topic_slug]);
 
   if (isLoading) return <p>...Loading</p>;
 
   return (
-    <main className="Main">
+    <section>
       <ul>
         {articles.map((article) => {
-          return (
-            <li key={article.article_id}>
-              <p className="Title">{article.title}</p>
-              <p>Author: {article.author}</p>
-              <p>Votes: {article.votes}</p>
-              <p>Comments: {article.comment_count}</p>
-            </li>
-          );
+          return <ArticleCard key={article.article_id} {...article} />;
         })}
       </ul>
-    </main>
+    </section>
   );
 };
 export default ArticleList;
