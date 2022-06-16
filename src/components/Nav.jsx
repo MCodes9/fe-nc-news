@@ -14,9 +14,7 @@ const Nav = () => {
   return (
     <>
       <nav className="nav">
-        <Link to="/" classname="link">
-          home{" "}
-        </Link>
+        <Link to="/">home</Link>
         {topics.map((topic) => {
           return (
             <Link

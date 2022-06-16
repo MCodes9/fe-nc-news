@@ -16,11 +16,11 @@ const ArticleList = (topic_slug) => {
   if (isLoading) return <p>... Loading</p>;
 
   return (
-    <section>
+    <ul className="list">
       {articles.map((article) => {
         return <ArticleCard key={article.article_id} article={article} />;
       })}
-    </section>
+    </ul>
   );
 };
 export default ArticleList;

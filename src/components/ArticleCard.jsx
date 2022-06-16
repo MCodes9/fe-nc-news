@@ -3,16 +3,17 @@ import formatDate from "../utils/formatDate";
 
 const ArticleCard = ({ article }) => {
   return (
-    <article className="ArticleCard">
+    <li key={article.article_id} className="card">
       <Link to={`/articles/${article.article_id}`}>
         <h3>{article.title}</h3>
       </Link>
-      <p>Author: {article.author}</p>
+      <h4>Written by {article.author}</h4>
+      <h5> {article.topic}</h5>
       <p>Date: {formatDate(article.created_at)}</p>
-      <p>Topic: {article.topic}</p>
+      <p>{article.body}</p>
       <p>Votes: {article.votes}</p>
       <p>Comments: {article.comment_count}</p>
-    </article>
+    </li>
   );
 };
 

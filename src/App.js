@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Topic from "./components/Topic";
+import CommentList from "./components/CommentList";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SingleArticle from "./components/SingleArticle";
@@ -17,6 +18,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/topics/:topic_slug" element={<Topic />} />
           <Route path="/articles/:article_id" element={<SingleArticle />} />
+          <Route
+            path="/articles/:article_id/comments"
+            element={<CommentList />}
+          />
         </Routes>
       </div>
     </BrowserRouter>
