@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { articleById } from "../utils/api";
 import formatDate from "../utils/formatDate";
 import ErrorPage from "./ErrorPage";
+import Vote from "./Vote";
 
 const SingleArticle = () => {
   const [article, setArticle] = useState({});
@@ -44,7 +45,7 @@ const SingleArticle = () => {
       <p>Author: {article.author}</p>
       <p>Date: {formatDate(article.created_at)}</p>
       <p>{article.body}</p>
-      <p>Votes: {article.votes}</p>
+      <Vote articleId={article.article_id} votes={article.votes} />
       <p>Comments: {article.comment_count}</p>
     </div>
   );
