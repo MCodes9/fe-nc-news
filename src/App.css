@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
 }
 
 .App {
@@ -7,31 +7,30 @@ html {
 }
 
 .header {
-  /* color: rgb(235, 96, 21); */
-  color: #363d42;
+  color: #01b4bc;
   box-sizing: content-box;
   text-align: center;
+  display: inline-block;
   height: 3rem;
   font-weight: 600;
   font-family: "Cutive Mono", monospace;
   font-size: 5rem;
 }
-.nav-link {
-  overflow: hidden;
-  font-family: avenir next, avenir, sans-serif;
-  color: #363d42;
+.nav {
+  font-family: "Maven Pro", sans-serif;
+  color: #fa5457;
   font-size: 1.25rem;
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
   text-align: center;
   border-top-style: solid;
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   display: inline-block;
+  flex: auto;
   padding: 14px 16px;
-
   width: 40rem;
-  height: 2rem;
+  height: 50px;
   text-decoration: none;
   transition: background-color 0.15s ease-in-out;
   position: sticky;
@@ -52,14 +51,22 @@ p {
   line-height: 1.25;
 }
 
-/* .Title {
-  font-family: "Courier Prime", monospace;
-  font-size: 1.5rem;
+button {
+  padding: 1%;
+  margin: 1%;
+  font-family: "Cutive Mono", monospace;
+  font-size: 0.85rem;
   font-weight: 200;
-  line-height: 1.25;
-  padding-top: 100px;
-  border-width: 0.1rem;
-} */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  color: #363d42;
+  border-color: #01b4bc;
+  border-radius: 9999px;
+  /* f6 link dim mb2 dib white bg-dark-green */
+}
 a:link {
   text-decoration: none;
 }

@@ -13,8 +13,10 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="nav-link">
-        <Link to="/">home </Link>
+      <nav className="nav">
+        <Link to="/" classname="link">
+          home{" "}
+        </Link>
         {topics.map((topic) => {
           return (
             <Link
