@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { getTopics } from "../utils/api";
+import { UserContext } from "../context/UserContext";
 
 const Nav = () => {
   const [topics, setTopics] = useState([]);
@@ -14,9 +15,8 @@ const Nav = () => {
   return (
     <>
       <nav className="nav">
-        <Link to="/" classname="link">
-          home{" "}
-        </Link>
+        <Link to="/">home </Link>
+        <Link to={`/users`}>users </Link>
         {topics.map((topic) => {
           return (
             <Link

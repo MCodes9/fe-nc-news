@@ -32,3 +32,15 @@ export const votePatch = (article_id, inc_votes) => {
       return response.data.article;
     });
 };
+
+export const getComments = (article_id) => {
+  return api.get(`/articles/${article_id}/comments`).then((response) => {
+    return response.data.comments;
+  });
+};
+
+export const getUsers = () => {
+  return api.get("/users").then((response) => {
+    return response.data.users;
+  });
+};

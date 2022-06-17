@@ -1,5 +1,5 @@
 html {
-  background-color: #f9f9f9;
+  background-color: #e6edec;
 }
 
 .App {
@@ -7,20 +7,33 @@ html {
 }
 
 .header {
-  color: #01b4bc;
-  box-sizing: content-box;
-  text-align: center;
-  display: inline-block;
-  height: 3rem;
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-none);
+  font-family: "Courier New", Courier, monospace;
   font-weight: 600;
-  font-family: "Cutive Mono", monospace;
+  color: #57afba;
   font-size: 5rem;
+  text-align: center;
+  padding: 1rem;
+}
+h3 {
+  font-family: "Cutive Mono", monospace;
+}
+h4,
+h5 {
+  font-family: "Courier New", Courier, monospace;
+  color: #363d42;
+}
+p {
+  font-family: "Cutive Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 200;
 }
 .nav {
   font-family: "Maven Pro", sans-serif;
-  color: #fa5457;
+  color: #57afba;
   font-size: 1.25rem;
-  background-color: #f9f9f9;
+  background-color: #e6edec;
   text-align: center;
   border-top-style: solid;
   border-top-width: 1px;
@@ -44,13 +57,6 @@ ul {
   justify-content: center;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 100;
-  line-height: 1.25;
-}
-
 button {
   padding: 1%;
   margin: 1%;
@@ -65,21 +71,4 @@ button {
   color: #363d42;
   border-color: #01b4bc;
   border-radius: 9999px;
-  /* f6 link dim mb2 dib white bg-dark-green */
-}
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-hover {
-  text-decoration: none;
-  background-color: #469ea9;
-}
-
-a:active {
-  text-decoration: none;
 }
