@@ -1,42 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { getComments } from "../utils/api";
 import formatDate from "../utils/formatDate";
 import CollapseComment from "./CollapseComment";
+import PostComment from "./CommentAdder";
+import ErrorPage from "./ErrorPage";
 
 const CommentList = ({ articleId }) => {
   const { article_id } = useParams();
   const [comments, setComments] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    getComments(article_id).then((commentsfromApi) => {
-      console.log(commentsfromApi);
-      setComments(commentsfromApi);
-      setIsLoading(false);
-    });
-  }, [article_id]);
-
-  if (isLoading) {
-    return <>...Loading</>;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    getComments(article_id)
+      .then((comments) => {
+        setComments(comments);
+      })
+      .catch((err) => {
+        setError(err.response.data);
+      });
+  };
+  if (error) {
+    return <ErrorPage msg={error.msg} status={error.status} />;
   }
-
   return (
     <section>
+      <PostComment setComments={setComments} />
       <CollapseComment>
         <ul>
           {comments.map((comment) => {
             return (
-              <article
-                key={comment.comment_id}
-                className="pv4 bt bb b--black-10 ph3 ph0-l"
-              >
-                <h3 className="f5 f4-l lh-copy athelas">{comment.author}</h3>
-                <h4 className="f5 f4-l lh-copy athelas">
-                  {formatDate(comment.created_at)}
-                </h4>
-                <p className="f5 f4-l lh-copy athelas">{comment.body}</p>
-                <p className="f5 f4-l lh-copy athelas">{comment.votes}</p>
+              <article key={comment.comment_id}>
+                <h3>{comment.author}</h3>
+                <h4>{formatDate(comment.created_at)}</h4>
+                <p>{comment.body}</p>
+                <p>{comment.votes}</p>
               </article>
             );
           })}
