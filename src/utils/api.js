@@ -38,3 +38,9 @@ export const getComments = (article_id) => {
     return response.data.comments;
   });
 };
+
+export const getUsers = () => {
+  return api.get("/users").then((response) => {
+    return response.data.users;
+  });
+};
