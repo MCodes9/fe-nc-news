@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { getUsers } from "../utils/api";
 import { UserContext } from "../context/UserContext";
+import { ErrorPage } from "./ErrorPage";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
