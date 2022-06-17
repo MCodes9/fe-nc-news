@@ -44,3 +44,18 @@ export const getUsers = () => {
     return response.data.users;
   });
 };
+
+export const postComment = (article_id, newComment, username) => {
+  return api
+    .post(`/articles/${article_id}/comments`, {
+      username: username,
+      body: newComment,
+    })
+    .then((response) => {
+      return response.data.newAddedComment;
+    });
+};
+
+export function deleteCmment(comment_id) {
+  return api.delete(`/comments/${comment_id}`);
+}
