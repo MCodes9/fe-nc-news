@@ -1,21 +1,23 @@
-import { Link } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
-import { getTopics } from "../utils/api";
-import { UserContext } from "../context/UserContext";
+import React from "react";
+// import { Link } from "react-router-dom";
+// import { useState, useEffect, useContext } from "react";
+// import { getTopics } from "../utils/api";
+// import { UserContext } from "../context/UserContext";
 
 const Nav = () => {
-  const [topics, setTopics] = useState([]);
-  const { user } = useContext(UserContext);
-  useEffect(() => {
-    getTopics().then((topics) => {
-      setTopics(topics);
-    });
-  }, []);
+  // const [topics, setTopics] = useState([]);
+  // const { user } = useContext(UserContext);
+  // useEffect(() => {
+  //   getTopics().then((topics) => {
+  //     setTopics(topics);
+  //   });
+  // }, []);
 
   return (
     <>
       <nav className="nav">
-        <Link to="/">home </Link>
+        <span className="Nav__link">This is a placeholder for navbar</span>
+        {/* <Link to="/">home </Link>
         <Link to={`/users`}>users </Link>
         {topics.map((topic) => {
           return (
@@ -30,8 +32,8 @@ const Nav = () => {
               </Link>
             </>
           );
-        })}
-        <span>Logged in user: {user.username}</span>
+        })} */}
+        {/* <span>Logged in user: {user.username}</span> */}
       </nav>
     </>
   );

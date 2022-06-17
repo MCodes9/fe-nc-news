@@ -52,7 +52,6 @@ export const postComment = (article_id, newComment, username) => {
       body: newComment,
     })
     .then((response) => {
-      console.log(response, "response from api");
       return response.data.newAddedComment;
     });
 };
