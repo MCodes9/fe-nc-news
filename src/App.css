@@ -1,5 +1,5 @@
 html {
-  background-color: #e6edec;
+  background-color: #dbebe8;
 }
 
 .App {
@@ -11,7 +11,7 @@ html {
   margin-bottom: var(--spacing-none);
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
-  color: #57afba;
+  color: #486265;
   font-size: 5rem;
   text-align: center;
   padding: 1rem;
@@ -31,9 +31,9 @@ p {
 }
 .nav {
   font-family: "Maven Pro", sans-serif;
-  color: #57afba;
+  color: #333333;
   font-size: 1.25rem;
-  background-color: #e6edec;
+  background-color: #dbebe8;
   text-align: center;
   border-top-style: solid;
   border-top-width: 1px;
@@ -51,17 +51,16 @@ p {
   z-index: 999;
 }
 ul {
+  flex: 1;
   list-style: none;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
+  font-family: "Cutive Mono", monospace;
 }
 
 button {
   padding: 1%;
   margin: 1%;
   font-family: "Cutive Mono", monospace;
-  font-size: 0.85rem;
+  font-size: 1.25rem;
   font-weight: 200;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -71,4 +70,26 @@ button {
   color: #363d42;
   border-color: #01b4bc;
   border-radius: 9999px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-block: 2rem;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.userCard{
+    padding: 10px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-block: 2rem;
+    text-align: center;
+    background-color: #f1f1f1;
+
 }

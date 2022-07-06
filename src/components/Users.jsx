@@ -39,7 +39,7 @@ const Users = () => {
                 setUser(user);
               }}
             >
-              Select this user
+              Login {user.username}
             </button>
           </li>
         );
